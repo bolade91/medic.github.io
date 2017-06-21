@@ -1,0 +1,19 @@
+{
+  "name": "Swift Hospital",
+  "version": "1.0.0",
+  "description": "Swift admin panel that is based on Bootstrap 3.x with Material Design",
+  "main": "js/admin.js",
+  "authors": [
+    "Thememakker"
+  ],
+  "license": "",
+  "homepage": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

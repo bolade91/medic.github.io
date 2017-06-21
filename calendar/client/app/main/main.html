@@ -1,0 +1,26 @@
+<div>
+	
+	<div class="row create-pdf">
+		<div class="create-pdf-inputs">
+			<div class="create-pdf-calendar-name">
+				<label for="name">Calendar Name:</label>
+				<div class="input-field">
+					<input id="name" ng-model="name" type="text" class="validate">
+				</div>
+			</div>
+			<div class="create-pdf-calendar-author">
+				<label for="by">Prepared By:</label>
+				<div class="input-field">
+					<input id="by" type="text"  ng-model="by" class="validate">
+				</div>
+			</div>
+		</div>
+		<div class="create-pdf-button">
+			<a href="#" class="waves-effect waves-light btn" ng-click="createPDF()" >Create PDF</a>  &nbsp;
+			<a class="waves-effect waves-light btn" ng-click="clearAll()">Clear All</a>
+		</div>
+	</div>
+	<div>
+		<full-calendar data-events="main.events"></full-calendar>
+	</div>
+</div>

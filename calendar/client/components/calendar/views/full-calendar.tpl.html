@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col s12">
+		<div class="row">
+
+			<div class="col s12 calendar-body-wrap">
+				<div class="col s9 calendar-events-col">
+					<div id="calendar"></div>
+				</div>
+				<div class="col s2 calendar-types-col">
+					<div ng-if="IsInit==true" class="calendar-types-instructions">
+						<div class="calendar-types-instructions-text">
+							<i class="material-icons" style="font-size: 2.6rem !important;">query_builder</i>
+							<h5>Please select a block of time to the left.</h5>
+							<p>Time can be selected in individual blocks or by selecting one block and dragging the handles to expand time across multiple hours for each day.</p>
+						</div>
+					</div>
+					<div ng-if="IsInit==false" class="calendar-types-check">
+						<div class="row calendar-types-check-dates">
+							<div class="col s12">
+								<p><b>{{eve.start}}</b> <br> {{eve.from}} - {{eve.to}}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div ng-repeat="spec in specifications" ng-class="{'opacity4': checkOpacity(spec.checked)}">
+								<div ng-style="{ 'background' : spec.color}" style="margin-bottom:2px">
+									<p class="fc-static-event-bg">
+										<input id="specifications_chk{{$index}}" value="{{spec.name}}" class="myCheckbox" ng-click="checkBoxSelection($index, specifications)" ng-model="spec.checked" type="checkbox" ng-disabled="disable[$index]">
+										<label for="specifications_chk{{$index}}" style="color:black !important">{{spec.name}}</label>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="calendar-types-btns">
+							<div class="row">
+								<div class="col s4"><button class="btn event-btn" type="button" ng-click="addEvent()" title="create event" name="action" ng-disabled="!isEventSelect">Create</button></div>
+								<div class="col s4"><button class="btn event-btn" name="delete" type="button" ng-click="deleteEvent()" ng-disabled="newEvent._id ==-1" title="Remove">Remove</button></div>
+								<div class="col s4"><button class="btn event-btn" type="button" ng-click="resetAll()" title="Reset" name="cancel">Cancel</button></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
