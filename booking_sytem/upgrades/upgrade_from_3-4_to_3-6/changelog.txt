@@ -1,6 +1,0 @@
-CHANGELOG BETWEEN v3.4 AND 3.6
-
--admin/class/slot.class.php
--admin/common.php
--admin/styles.php
--common.php

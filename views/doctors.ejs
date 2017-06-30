@@ -41,8 +41,11 @@
         <!-- User Info -->
         <div class="user-info">
             <div class="admin-image"> <img src="assets/images/random-avatar7.jpg" alt=""> </div>
-            <div class="admin-action-info"> <span>Welcome</span>
-                <h3>Jemila</h3>
+            <div class="admin-action-info"> <h3>DOC</h3>
+                <span>Is the place you</span>
+                <span>want to be if you are</span>
+                <span>looking for immediate</span>
+                <span>medical assisstance</span>
             </div>
         </div>
         <!-- #User Info --> 
@@ -64,414 +67,35 @@
     <div class="container-fluid">
         <div class="block-header">
             <h2>All Doctors</h2>
-            <small class="text-muted">Welcome to Swift application</small>
+            <small class="text-muted">Welcome to DOC application</small>
         </div>
         <div class="row clearfix">
-         <% for(var i=0; i<doctors.length; i++){ %>
+         <% for(var i=0; i<data.length; i++){ %>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="card">
                     <div class="body">
                         <div class="member-card verified">
                             <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar3.jpg" class="img-circle" alt="profile-image">
+                                <img src="<%= data[i].photo %>" class="img-circle" alt="profile-image" style="height:120px; width:120px">
                                 <i class="zmdi zmdi-info" title="verified user"></i>
                             </div>
 
                             <div class="">
-                                <h4 class="m-b-5">Dr. <%= doctors[i].name %></h4>
-                                <p class="text-muted"><%= doctors[i].function %><span> 
+                                <h4 class="m-b-5">Dr. <%= data[i].name %></h4>
+                                <p class="text-muted"><%= data[i].function %><span> 
                             </div>
 
-                            <p class="text-muted"><%= doctors[i].address %></p>  
+                            <p class="text-muted"><%= data[i].address %></p>  
                             <div>
-                                <a href="tel:<%= doctors[i].tel %>"><i class="fa fa-phone" aria-hidden="true" style="font-size:32px;color:green"></i></a>
+                                <a href="tel:<%= data[i].tel %>"><i class="fa fa-phone" aria-hidden="true" style="font-size:32px;color:green"></i></a>
+                                <a href="tel:<%= data[i].tel %>"><i class="fa fa-phone" aria-hidden="true" style="font-size:32px;color:yellow"></i></a>
                             </div>                        
-                            <a href="/profile/<%= doctors[i].id %>" class="btn btn-raised btn-sm">View Profile</a>
+                            <a href="/profile/<%= data[i].id %>" class="btn btn-raised btn-sm">View Profile</a>
                         </div>
                     </div>
                 </div>
             </div>
          <% } %> 
-
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar4.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="Not verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">ENT Specialist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar6.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Neurologist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar6.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Neurologist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar3.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Dentist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar4.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="Not verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">ENT Specialist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar6.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Neurologist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar6.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Neurologist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar6.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Neurologist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar6.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Neurologist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card verified">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar3.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">Dentist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="member-card">
-                            <ul class="header-dropdown">
-							<li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="zmdi zmdi-more-vert"></i></a>
-								<ul class="dropdown-menu pull-right">
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Edit</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Delete</a></li>
-									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Block</a></li>
-								</ul>
-							</li>
-						</ul>
-                            <div class="thumb-xl member-thumb">
-                                <img src="assets/images/random-avatar4.jpg" class="img-circle" alt="profile-image">
-                                <i class="zmdi zmdi-info" title="Not verified user"></i>
-                            </div>
-
-                            <div class="">
-                                <h4 class="m-b-5">Kendra V. Alfaro</h4>
-                                <p class="text-muted">ENT Specialist<span> <a href="#" class="text-pink">websitename.com</a> </span></p>
-                            </div>
-
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                            <a href=""  class="btn btn-raised btn-sm">View Profile</a>
-                            <ul class="social-links list-inline m-t-10">
-                                <li><a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="#" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="3" ><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-xs-12 text-center">
-                <a href="" class="btn btn-raised g-bg-cyan">Add Doctor</a>
-            </div>
         </div>
     </div>
 </section>

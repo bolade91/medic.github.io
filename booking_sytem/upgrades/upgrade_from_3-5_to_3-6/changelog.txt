@@ -1,5 +1,0 @@
-CHANGELOG BETWEEN v3.5 AND 3.6
-
--admin/common.php
--admin/styles.php
--common.php
