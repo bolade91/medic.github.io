@@ -1,20 +1,5 @@
 var express=require("express"),
-    mysql=require("mysql"),
-	bodyParser=require("body-parser")
-
-//Database init
-var connection = mysql.createConnection({
-					host: "localhost",
-					user: "root",
-					password: "teddybravoç&",
-					database: "sample"
-				});
-
-connection.connect(function(err){
-	if(err)
-		throw err;
-	console.log("Database connected!");
-});
+    bodyParser=require("body-parser")
 	
 app=express();
 app.set('view engine', 'ejs');
