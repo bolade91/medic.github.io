@@ -2,6 +2,8 @@ var express=require("express"),
     bodyParser=require("body-parser")
 	
 app=express();
+
+var port=process.env.PORT || 8080;
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -31,6 +33,6 @@ app.get("/profile/:id", function(req, res){
 	//res.send("Show page!!");
 });
 
-app.listen(8080, "localhost", function(){
-	console.log("server listening on port 8080");
+app.listen(port, function(){
+	console.log("server listening on port "+port);
 });
